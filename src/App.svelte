@@ -1,11 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import {
-    format as formatDate,
-    getHours,
-    getMinutes,
-    getSeconds
-  } from "date-fns";
+  import { format as formatDate } from "date-fns";
   import Clock from "./components/Clock.svelte";
 
   let now = new Date();
@@ -24,16 +19,16 @@
    * Function to animate:
    * - update the "now" variable to current date, and request to run again on next frame.
    */
-  function animate() {
+  function updateTime() {
     now = new Date();
-    window.requestAnimationFrame(animate);
+    window.requestAnimationFrame(updateTime);
   }
 
   /**
    * On mount, start the animation
    */
   onMount(() => {
-    animate();
+    updateTime();
   });
 </script>
 
