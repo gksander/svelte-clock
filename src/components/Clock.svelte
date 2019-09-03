@@ -17,7 +17,15 @@
     minutes = [...Array(60).keys()].filter(m => m % 5 != 0);
 </script>
 
-<svg viewBox="0 0 100 100" style="width: 50%; margin: 12px 0px;">
+<style>
+  .clock {
+    width: 50%;
+    max-width: 350px;
+    margin: 12px 0px;
+  }
+</style>
+
+<svg viewBox="0 0 100 100" class="clock">
   <circle
     cx={R}
     cy={R}
