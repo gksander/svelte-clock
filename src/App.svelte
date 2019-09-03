@@ -8,8 +8,7 @@
   } from "date-fns";
   import Clock from "./components/Clock.svelte";
 
-  let clockInterval = null,
-    now = new Date();
+  let now = new Date();
 
   /**
    * Some computed properties: prettied dates, etc.
